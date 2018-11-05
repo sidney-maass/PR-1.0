@@ -102,7 +102,7 @@ public class TTT {
 		return null;
 
 	}
-//implication of board
+//draw board
 	static void printBoard() {
 
 		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
