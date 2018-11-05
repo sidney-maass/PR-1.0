@@ -49,13 +49,13 @@ public class TTT {
 			winner = checkWinner();
 			x++;
 			if (x == 9) {
-				System.out.println("draw");
+				System.out.println("Unentschieden!");
 				break;
 			}
 		}
 
 		if (winner != null) {
-			System.out.println("Congratulations! " + winner + "'s have won! Thanks for playing.");
+			System.out.println("Glückwunsch!" + winner + "hat gewonnen. Danke fürs Spielen.");
 		}
 
 	}
