@@ -15,27 +15,27 @@ public class TTT {
 		populateEmptyBoard();
 		System.out.println("Wilkommen zu Tic-Tac-Toe");
 		printBoard();
-
+//Player's turn
 		while (winner == null) {
 			int Eingabe;
 
 			Eingabe = sc.nextInt();
 			if (turn == 0) {
 
-				board[Eingabe - 1] = "X";
+				board[Eingabe - 1] = "O";
 				turn = 1;
 			}
 
 			else {
-
+//AI's turn
 				while (true) {
 
 					int h = (int) ((Math.random()) * 8) + 1;
-					if (board[h].equals("O") | board[h].equals("X")) {
+					if (board[h].equals("X") | board[h].equals("O")) {
 
 					} else {
 
-						board[h] = "O";
+						board[h] = "X";
 						turn = 0;
 
 						break;
@@ -48,18 +48,19 @@ public class TTT {
 
 			winner = checkWinner();
 			x++;
+			//draw
 			if (x == 9) {
 				System.out.println("Unentschieden!");
 				break;
 			}
 		}
-
+//winner
 		if (winner != null) {
 			System.out.println("Glückwunsch!" + winner + "hat gewonnen. Danke fürs Spielen.");
 		}
 
 	}
-
+//checking for every possibility if there is a winner
 	static String checkWinner() {
 		for (int i = 0; i < 8; i++) {
 			String Z = null;
@@ -101,7 +102,7 @@ public class TTT {
 		return null;
 
 	}
-
+//implication of board
 	static void printBoard() {
 
 		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
@@ -111,7 +112,7 @@ public class TTT {
 		System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
 
 	}
-
+//empty board
 	static void populateEmptyBoard() {
 		for (int i = 0; i < 9; i++) {
 			board[i] = String.valueOf(i + 1);
