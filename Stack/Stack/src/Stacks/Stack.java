@@ -6,7 +6,7 @@ public class Stack {
 	public Stack(int size) {
 		elements = new char[size];
 	}
-
+        // A1
 	int stackPointer = 0;
 
 	// adds one element to the stack
@@ -19,8 +19,9 @@ public class Stack {
 	public char pop() {
 		return (stackPointer > 0) ? elements[--stackPointer] : '\u0000';
 	}
-
-	// Check if brackets are correct
+        //A2
+	
+	// Checking if brackets are correct
 	public String checkInput() {
 		// save all closed brackets that haven't been opened yet
 		String brackets = "";
