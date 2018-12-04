@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		// Create new stack
-		Stack s = new Stack(100);
+		Stack myStack = new Stack(100);
 		Scanner sc = new Scanner(System.in);
 		String input = "";
 		do {
@@ -14,9 +14,9 @@ public class Main {
 				input = sc.nextLine();
 
 			for (int i = 0; i < input.length(); i++) {
-				s.push(input.charAt(i));
+				myStack.push(input.charAt(i));
 			}
-			System.out.println(s.checkInput());
+			System.out.println(myStack.checkInput());
 		} while (true);
 
 	}
